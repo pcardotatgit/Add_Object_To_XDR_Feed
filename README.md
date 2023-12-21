@@ -20,7 +20,7 @@ Having these Feeds created into your XDR tenant is a mandatory pre requisit.
 
 ## Installation
 
-You must have an up and running python 3.x environment and you must have the **crayons** and **requests** modules installed. We assume that you kniow how to setup that.
+You must have an up and running python 3.x environment and you must have the **crayons** and **requests** modules installed. We assume that you know how to setup that.
 
 ### Edit the config.txt file
 
@@ -43,6 +43,10 @@ Possible values for **host** depending on your region, are :
 
 Possible values for **host_for_token** depending on your region, are :
 
+- https://visibility.eu.amp.cisco.com
+- https://visibility.apjc.amp.cisco.com
+- https://visibility.amp.cisco.com
+
 ### Run the script
 
 You just have to run the script :
@@ -53,5 +57,15 @@ You will be asked to enter the observable value.  It can be either an IPv4 addre
 
 Enter the value and type enter. You will see all the process that add the object to the XDR Feed.
 
-The script check the observable type, then map it to the matching indicator depending on the object type. Indicators are linked to the XDR feeds. Then it creates a new judgement for the object and finally create a new relationship that link the observable into judgment to the matching Indicator. Once done the observabl appears into the XDR feed.
+The script check the observable type, then map it to the matching indicator depending on the object type. Indicators are linked to the XDR feeds. Then it creates a new judgement for the object and finally create a new relationship that link the observable into judgment to the matching Indicator. Once done the observable appears into the XDR feed.
+
+Open the XDR feed URL and search for the object you just added into it. You must find it.
+
+That's it.
+
+### The XDR Workflow
+
+If you search for an XDR Workflow which does this, then have a look to this one :
+
+[Add_an_Observable_into_Judgments_and_feeds workflow](https://github.com/pcardotatgit/SecureX_Workflows_and_Stuffs/tree/master/500-SecureX_Workflow_examples/Atomics/Add_an_Observable_into_Judgments_and_feeds)
 
