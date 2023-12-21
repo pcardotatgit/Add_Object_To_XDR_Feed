@@ -20,6 +20,7 @@ def parse_config(text_content):
                 conf_result[0]=line.split('=')[1]
                 conf_result[0]=conf_result[0].replace('"','')
                 conf_result[0]=conf_result[0].replace("'","")
+                conf_result[0]=conf_result[0].strip()
             else:
                 conf_result[0]=""
         elif 'ctr_client_password' in line:
@@ -28,6 +29,7 @@ def parse_config(text_content):
                 conf_result[1]=line.split('=')[1]
                 conf_result[1]=conf_result[1].replace('"','')
                 conf_result[1]=conf_result[1].replace("'","")
+                conf_result[1]=conf_result[1].strip()
             else:
                 conf_result[1]=""        
         elif '.eu.amp.cisco.com' in line:
